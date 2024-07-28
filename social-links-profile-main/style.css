@@ -9,20 +9,25 @@
 
   --clr-neutral-100: hsl(0, 0%, 100%);
 
+  --fw-small: 300;
   --fw-regular: 400;
-  --fw-medium: 500;
+  --fw-semi-bold: 600;
   --fw-bold: 700;
 
-  --ff-accent: ;
-  --ff-base: ;
+  --ff-base: Inter, sans-serif;
 
-  --spacing: ;
+  --spacing-xsmall: 0.25rem;
+  --spacing-small: 0.5em;
+  --spacing-regular: 1em;
+  --spacing-medium: 2em;
+  --spacing-large: 3em;
+  --spacing-xlarge: 6em;
 
   --fs-300: 0.8125rem;
   --fs-400: 0.875rem;
   --fs-500: 0.9375rem;
   --fs-600: 1rem;
-  --fs-700: 1.875rem;
+  --fs-700: 1.75rem;
   --fs-800: 2.5rem;
   --fs-900: 3.5rem;
 }
@@ -46,7 +51,7 @@ html:focus-within {
 
 html,
 body {
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 body {
@@ -84,7 +89,67 @@ h6 {
 }
 
 /* ========|| General Styling ||========= */
-
+body {
+  display: grid;
+  place-content: center;
+  font-family: var(--ff-base);
+  background-color: var(--clr-primary-900);
+  text-align: center;
+}
+p {
+  color: var(--clr-neutral-100);
+}
 /* ==========|| Main Styling ||========== */
+.container {
+  max-width: 24rem;
+  background-color: var(--clr-secondary-800);
+  border-radius: 1rem;
+  margin: var(--spacing-xlarge) var(--spacing-medium);
+}
 
+.wrapper {
+  padding: var(--spacing-medium);
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+.profile-picture {
+  border-radius: 100vh;
+  width: 6em;
+}
+
+.user-container {
+  display: grid;
+  padding-inline: var(--spacing-small);
+}
+.user-name {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-semi-bold);
+  margin-block: var(--spacing-regular) var(--spacing-xsmall);
+}
+.user-address {
+  font-weight: var(--fw-semi-bold);
+  color: var(--clr-accent);
+}
+.user-info {
+  font-weight: var(--fw-small);
+  margin-block: var(--spacing-medium);
+}
+
+.nav {
+  display: grid;
+  gap: 1em;
+}
+.btn {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-semi-bold);
+}
 /* ============|| Utilities ||=========== */
+.dark {
+  background-color: var(--clr-secondary-700);
+}
